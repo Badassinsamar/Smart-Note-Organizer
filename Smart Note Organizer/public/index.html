@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Note Organizer</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <nav class="nav-style">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="vision.html">Vision</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="project.html">Projects</a></li>
+        </ul>
+      </nav>
+      <h1>Smart Note Organizer</h1>
+
+      <section class="form-section">
+        <form id="noteForm">
+          <input type="hidden" id="noteId" />
+
+          <label
+            >Title
+            <input id="title" type="text" placeholder="Note title" required />
+          </label>
+
+          <label
+            >Description
+            <textarea
+              id="description"
+              rows="4"
+              placeholder="Write your note..."
+              required
+            ></textarea>
+          </label>
+
+          <label
+            >Keynote (highlighted word)
+            <input id="keynote" type="text" placeholder="Important word" />
+          </label>
+
+          <label
+            >Date
+            <input id="date" type="date" />
+          </label>
+
+          <label
+            >Subject
+            <input
+              id="subject"
+              type="text"
+              placeholder="Subject (e.g. Math, Science)"
+            />
+          </label>
+
+          <div class="buttons">
+            <button id="saveBtn" type="submit">Save Note</button>
+            <button id="cancelBtn" type="button" class="secondary">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="list-section">
+        <div class="list-header">
+          <h2>Notes</h2>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search by title or subject..."
+          />
+        </div>
+
+        <div id="notesList" class="notes-list">
+          <!-- Notes will be rendered here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- App script (module) -->
+    <script type="module" src="script/app.js"></script>
+  </body>
+</html>
