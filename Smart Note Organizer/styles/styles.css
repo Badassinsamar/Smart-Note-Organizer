@@ -1,0 +1,136 @@
+:root {
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #93a4b8;
+  --accent: #7dd3fc;
+  --glass: rgba(255, 255, 255, 0.03);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+}
+body {
+  background: linear-gradient(180deg, var(--bg) 0%, #071022 100%);
+  color: #e6eef6;
+  padding: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 1000px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.form-section {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+.form-section label {
+  display: block;
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.form-section input[type="text"],
+.form-section input[type="date"],
+.form-section input[type="search"],
+.form-section textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: var(--glass);
+  color: inherit;
+}
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+button {
+  padding: 0.6rem 0.9rem;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--accent), #60a5fa);
+  color: #022033;
+  font-weight: 600;
+}
+button.secondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+.list-section {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+}
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.8rem;
+}
+.note-card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+.note-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+.note-title {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.note-keynote {
+  display: inline-block;
+  padding: 0.15rem 0.4rem;
+  border-radius: 6px;
+  background: rgba(125, 211, 252, 0.08);
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.card-actions {
+  display: flex;
+  gap: 0.4rem;
+  justify-content: flex-end;
+}
+.card-actions button {
+  padding: 0.35rem 0.5rem;
+  font-size: 0.85rem;
+}
+.small-btn {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
